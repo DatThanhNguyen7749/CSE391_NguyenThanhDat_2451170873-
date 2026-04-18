@@ -80,3 +80,28 @@ Câu C1 (10đ) — Thiết kế cấu trúc
 </footer>
 Câu C2
 Quan điểm của đồng nghiệp là sai. Trước hết, thẻ semantic HTML cực kỳ quan trọng cho SEO — công cụ tìm kiếm. Google không chỉ đọc nội dung, mà còn phân tích cấu trúc HTML để hiểu trang web. Khi bạn dùng <article> cho bài viết, <nav> cho menu, <figure> cho ảnh, Google nhận diện ngay cấu trúc. Ví dụ, Shopee dùng semantic tags đúng cách cho mỗi sản phẩm (<article>, <figure>), giúp các listing xuất hiện nhiều hơn trong kết quả tìm kiếm và Google Shopping, tăng traffic 30-50%. Ngược lại, nếu dùng toàn <div>, Google phải "đoán", SEO kém, traffic giảm, mất hàng triệu đô doanh số. Thứ hai, semantic HTML hỗ trợ trợ năng cho người khuyết tật. Screen readers (phần mềm đọc màn hình) dùng <nav>, <main>, <aside> để điều hướng. Người mù có thể skip đến menu bằng phím tắt. Với toàn <div>, họ phải nghe từng ký tự, lãng phí thời gian. Pháp luật WCAG 2.1 còn bắt buộc web phải accessible, vi phạm có thể bị kiện. Shopee cũng cấu trúc rõ ràng giỏ hàng với <aside>, tìm kiếm với <form>, giúp người dùng dễ dàng sử dụng. Tuy nhiên, <div> vẫn hoàn toàn phù hợp khi làm layout phức tạp với CSS Grid hay Flexbox, hoặc wrapper bao bọc các phần tử không cần ý nghĩa ngữ nghĩa. Tóm lại, học semantic HTML là vô cùng cần thiết. Học trong 1 tiếng, tiết kiệm hàng trăm giờ debug và tăng SEO.
+Câu B3
+Dòng 1: Thiếu html trong DOCTYPE.
+Dòng 2: Thiếu language, thêm lang = "vi".
+Dòng 4: Title chưa đóng.
+Dòng 5: charset sai phải là UTF-8.
+Dòng 6: Thiếu meta viewport.
+Dòng 8: Thẻ đóng h1 thiếu /.
+Dòng 12: Thẻ đóng a thiếu /.
+Dòng 20: Thiếu "" ở src và thiếu alt.
+Dòng 22: Thẻ <p> phải đóng ngoài cùng. Thẻ <b> đóng sai và ko phải thẻ semantic, đổi thành <strong>.
+Dòng 28-35: Thiếu thead, tbody(phải đóng lại thead ở 28 và 31, tbody ở 32 và 35).
+Dòng 40: Thừa main đổi thành aside.
+Dòng 45: Thẻ đóng p thiếu /.ư
+câu B4
+1. Trong ảnh shopee ta có thể thấy có rất ít semantic do chủ yếu là script nhưng thông thường chúng ta có thể thấy các thẻ semantic như header, footer,..
+Ngoài ra ta có thể thấy có những thẻ có thể dùng semantic nhưng lại dùng div trong ảnh như: div id = "main" hay div id = "modal" có thể sửa thành <main> và <dialog>
+2. Searchbar trong ảnh ko còn sử dụng table mà sử dụng flex
+3. Không thấy action và method, input types được dùng bao gồm:
+<input 
+  class="shopee-searchbar-input__input"
+  placeholder="Tìm sản phẩm, thương hiệu, và tên shop"
+  maxlength="128"
+  autocomplete="off"
+  role="combobox"
+>
