@@ -8,29 +8,28 @@ Câu A1 (Nguồn: 01_introduction_html_universe.md 1.1 Kiến trúc Client-Serve
 2. Screenshot
 Câu A2 (Nguồn: 04_visible_part_html.md)
 - trang web bị đánh giá SEO thấp vì:
-+ dùng <div class="header"> thay vì <header> cho phần đầu trang.
-+ dùng <div class="nav"> thay vì <nav> cho phần điều hướng.
-+ dùng <div class="main"> thay vì <main> cho phần nội dung chính.
-+ dùng <div class ="product"> thay vì <article> cho phần sản phẩm.
-+ dùng <div class="footer"> thay vì <footer> cho phần chân trang.
++ dùng `<div class="header">` thay vì `<header>` cho phần đầu trang.
++ dùng `<div class="nav">` thay vì `<nav>` cho phần điều hướng.
++ dùng `<div class="main">` thay vì `<main>` cho phần nội dung chính.
++ dùng `<div class ="product">` thay vì `<article>` cho phần sản phẩm.
++ dùng `<div class="footer">` thay vì `<footer>` cho phần chân trang.
 => Google không hiểu cấu trúc.
 Câu A3 
-[ Hộp 1 ] (div gom các phần tử lại 1 khối)
+`[ Hộp 1 ]` (div gom các phần tử lại 1 khối)
 Text A Text B (span gom các phần tử lại 1 dòng)
-[ Hộp 2 ]
+`[ Hộp 2 ]`
 Text C Text D(text D in đậm(strong))
-[ Hộp 3 ]
+`[ Hộp 3 ]`
 Câu A4
-thead: tiêu đề cột
-tbody: dữ liệu chính
-tfoot: tổng kết
+`thead`: tiêu đề cột
+`tbody`: dữ liệu chính
+`tfoot`: tổng kết
 Lý do không nên dùng table để tạo layout cho trang web:
 1. Không phải thẻ semantic => Google không hiểu cấu trúc.
 2. Khó responsive(table khó co giãn linh hoạt theo màn hình)
 3. Ảnh hưởng đến SEO (Screenreader sẽ hiểu nhầm là bảng dữ liệu)
 Câu C1
-Câu C1 (10đ) — Thiết kế cấu trúc
-
+```html
 <header> <!-- header cho phần đầu trang -->
     <nav> <!-- nav cho menu chính -->
         <a href="#home">Trang chủ</a>
