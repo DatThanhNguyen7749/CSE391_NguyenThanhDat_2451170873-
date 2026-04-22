@@ -83,9 +83,11 @@ Câu C1
 ```
 
 Câu C2
+
 Quan điểm của đồng nghiệp là sai. Trước hết, thẻ semantic HTML cực kỳ quan trọng cho SEO — công cụ tìm kiếm. Google không chỉ đọc nội dung, mà còn phân tích cấu trúc HTML để hiểu trang web. Khi bạn dùng `<article>` cho bài viết, `<nav>` cho menu, `<figure>` cho ảnh, Google nhận diện ngay cấu trúc. Ví dụ, Shopee dùng semantic tags đúng cách cho mỗi sản phẩm (`<article>`, `<figure>`), giúp các listing xuất hiện nhiều hơn trong kết quả tìm kiếm và Google Shopping, tăng traffic 30-50%. Ngược lại, nếu dùng toàn `<div>`, Google phải "đoán", SEO kém, traffic giảm, mất hàng triệu đô doanh số. Thứ hai, semantic HTML hỗ trợ trợ năng cho người khuyết tật. Screen readers (phần mềm đọc màn hình) dùng `<nav>`, `<main>`, `<aside>` để điều hướng. Người mù có thể skip đến menu bằng phím tắt. Với toàn `<div>`, họ phải nghe từng ký tự, lãng phí thời gian. Pháp luật WCAG 2.1 còn bắt buộc web phải accessible, vi phạm có thể bị kiện. Shopee cũng cấu trúc rõ ràng giỏ hàng với `<aside>`, tìm kiếm với `<form>`, giúp người dùng dễ dàng sử dụng. Tuy nhiên, `<div>` vẫn hoàn toàn phù hợp khi làm layout phức tạp với CSS Grid hay Flexbox, hoặc wrapper bao bọc các phần tử không cần ý nghĩa ngữ nghĩa. Tóm lại, học semantic HTML là vô cùng cần thiết. Học trong 1 tiếng, tiết kiệm hàng trăm giờ debug và tăng SEO.
 
 Câu B3
+
 Dòng 1: Thiếu html trong DOCTYPE.
 Dòng 2: Thiếu language, thêm lang = "vi".
 Dòng 4: Title chưa đóng.
