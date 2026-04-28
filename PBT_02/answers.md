@@ -115,3 +115,7 @@ Câu C2
    - Tấn công SQL Injection: hacker gửi dữ liệu độc hại qua request trực tiếp
    - Tấn công XSS: chèn script vào input không được sanitize
    - Dữ liệu không nhất quán: frontend có thể bị bypass, dữ liệu rác vào database.
+
+Câu B1
+HTML không thể confirm password vì:
+- HTML chỉ kiểm tra input riêng lẻ, không so sánh giá trị giữa 2 input khác nhau.
