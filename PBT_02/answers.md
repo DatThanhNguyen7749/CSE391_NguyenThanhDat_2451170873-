@@ -114,4 +114,4 @@ Câu C2
 4. 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend:
    - Tấn công SQL Injection: hacker gửi dữ liệu độc hại qua request trực tiếp
    - Tấn công XSS: chèn script vào input không được sanitize
-   - Dữ liệu không nhất quán: frontend có thể bị bypass, dữ liệu rác vào database
+   - Dữ liệu không nhất quán: frontend có thể bị bypass, dữ liệu rác vào database.
