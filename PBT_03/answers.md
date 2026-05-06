@@ -117,3 +117,6 @@ Nếu Rule A thêm `!important`:
 - `p { color: black !important; }` sẽ thắng tất cả rule thông thường.
 - Màu sẽ là black.
 - Vì `!important` ưu tiên vượt trên tất cả, bất kể specificity thấp hơn.
+
+Câu C1
+
