@@ -180,3 +180,29 @@ Sự khác biệt:
 - content-box: width chỉ là phần content, padding và border thêm vào ngoài. Tổng width = width + padding + border
 - border-box: width bao gồm content + padding + border. Tổng width = width (không thay đổi dù thêm padding/border)
 
+Không có border-box:
+- Cột trái: 250px + 15px×2 + 1px×2 = 282px
+- Cột giữa: 500px + 20px×2 + 1px×2 = 542px
+- Cột phải: 250px + 15px×2 + 1px×2 = 282px
+- Tổng: 282 + 542 + 282 = 1106px > 1000px
+
+Có border-box:
+- Tất cả cột giữ nguyên width (250px + 500px + 250px = 1000px)
+- Padding và border tính vào trong width nên tổng vẫn là 1000px
+
+Câu B3
+1.
+```css
+1. p { color: orange; }: 0,0,1
+2. body p { color: red; }: 0,0,2
+3. .text { color: yellow; }: 0,1,0 
+4. .highlight { color: green; }: 0,1,0
+5. p.text { color: blue; }: 0,1,1
+6. .text.highlight { color: violet; }: 0,2,0
+7. p.text.highlight { color: pink; }: 0,2,1
+8. #demo { color: purple; }: 1,0,0
+9. p#demo { color: brown; }: 1,0,1
+10. #demo.text { color: aqua; }: 1,1,0
+```
+2. Element cuối cùng hiển thị màu `aqua` (rule số 10) vì rule số 10 có specificity cao nhất (1,1,0): 1 id + 1 class + 0 element
+4. Thay đổi thứ tự rules trong file kết quả không đổi vì specificity quyết định, không phải thứ tự. Rule có specificity cao hơn luôn thắng, bất kể vị trí trong CSS file.
