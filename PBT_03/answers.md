@@ -120,3 +120,46 @@ Nếu Rule A thêm `!important`:
 
 Câu C1
 
+1. Tính chiều rộng thực tế:
+- `.sidebar`: width 300px + padding 20px hai bên + border 1px hai bên = 300 + 40 + 2 = 342px
+- `.content`: width 660px + padding 30px hai bên + border 1px hai bên = 660 + 60 + 2 = 722px
+- Tổng = 342 + 722 = 1064px > 960px
+
+2. Layout bị vỡ vì:
+- Vì box-sizing mặc định là `content-box`, nên `width` chỉ tính phần nội dung.
+- Padding và border vẫn được cộng vào ngoài width.
+- Do đó tổng chiều rộng của hai cột lớn hơn container 960px, nên content bị đẩy xuống dòng mới.
+
+3. Cách sửa:
+- Cách 1 (dùng `border-box`):
+  - Thêm `* { box-sizing: border-box; }`
+  - Giữ `.sidebar { width: 300px; }` và `.content { width: 660px; }`
+  - Khi đó padding/border được tính trong 300px và 660px nên tổng vừa vặn.
+
+- Cách 2 (không dùng `border-box`):
+  - Giảm width để bù padding và border.
+  - Ví dụ: `.sidebar { width: 258px; }` và `.content { width: 598px; }`.
+  - Khi đó tổng thực tế là 960px:
+    - sidebar = 258 + 40 + 2 = 300
+    - content = 598 + 60 + 2 = 660
+
+Câu C2
+
+1. Sản phẩm A (h2)
+- `font-size`: 20px: `.card .title { font-size: 20px; }`
+- `color`: green: `.highlight { color: green !important; }`
+- Giải thích: `.title` không đặt màu, nên h2 sẽ nhận màu từ rule `.highlight` vì nó có `!important`.
+
+2. Mô tả sản phẩm (p trong card featured)
+- `color`: blue
+- Giải thích: rule `.card { color: blue; }` áp dụng cho phần tử cha `.card`, và `p` có `color: inherit;`, nên nó nhận màu từ parent là blue.
+
+3. Sản phẩm B (h2)
+- `font-size`: 20px: `.card .title`
+- `color`: blue
+- Giải thích: không có rule màu cho `.title` hoặc `h2`, nên h2 kế thừa màu từ `.card { color: blue; }`.
+
+4. Mô tả sản phẩm B (p.highlight)
+- `color`: green
+- Giải thích: rule `.highlight { color: green !important; }` có `!important`, nên thắng mọi rule bình thường, kể cả màu inherit từ parent.
+
