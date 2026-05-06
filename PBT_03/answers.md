@@ -163,3 +163,20 @@ Câu C2
 - `color`: green
 - Giải thích: rule `.highlight { color: green !important; }` có `!important`, nên thắng mọi rule bình thường, kể cả màu inherit từ parent.
 
+Câu B2
+Hộp 1 (content-box): chiều rộng thực tế = 350px
+- Width CSS: 300px
+- Padding: 20px × 2 = 40px
+- Border: 5px × 2 = 10px
+- Tổng: 300 + 40 + 10 = 350px
+
+Hộp 2 (border-box): chiều rộng thực tế = 300px
+- Width CSS: 300px (đã bao gồm padding + border)
+- Padding: 20px × 2 = 40px
+- Border: 5px × 2 = 10px
+- Content width thực tế: 300 - 40 - 10 = 250px
+
+Sự khác biệt:
+- content-box: width chỉ là phần content, padding và border thêm vào ngoài. Tổng width = width + padding + border
+- border-box: width bao gồm content + padding + border. Tổng width = width (không thay đổi dù thêm padding/border)
+
