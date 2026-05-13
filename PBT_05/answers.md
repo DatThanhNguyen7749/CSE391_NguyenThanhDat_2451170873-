@@ -331,3 +331,8 @@ DESKTOP (≥ 1024px):
     }
 }
 ```
+
+- Compile SCSS:
+```bash
+sass scss/style.scss style.css
+```
