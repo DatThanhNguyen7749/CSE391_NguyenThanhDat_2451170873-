@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Bootstrap Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <style>
         .hero-slide {
             min-height: 500px;
@@ -16,15 +17,29 @@
             height: 220px;
             object-fit: cover;
         }
+
+        body {
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+            transition: background-color .3s, color .3s;
+        }
+
+        .card,
+        .modal-content,
+        .navbar,
+        footer {
+            transition: background-color .3s, color .3s;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-3" href="#">
                 Shop<span class="text-primary">DatDepZai</span>
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
