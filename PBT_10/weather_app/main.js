@@ -374,33 +374,3 @@ function init() {
 // Chạy init khi trang load xong
 // DOMContentLoaded: Sự kiện khi HTML đã parse xong
 document.addEventListener('DOMContentLoaded', init);
-
-
-// ============================================
-// 📚 TÓM TẮT KIẾN THỨC ĐÃ SỬ DỤNG
-// ============================================
-
-/*
-1. ASYNC/AWAIT:
-   - async function: Khai báo hàm bất đồng bộ
-   - await: Đợi Promise resolve rồi mới chạy tiếp
-   
-2. FETCH API:
-   - fetch(url): Gọi HTTP request, trả về Promise
-   - response.json(): Parse JSON body, trả về Promise
-   
-3. TRY-CATCH:
-   - try: Khối code có thể gây lỗi
-   - catch: Bắt và xử lý lỗi
-   
-4. DOM MANIPULATION:
-   - getElementById(): Lấy element theo id
-   - classList.add/remove(): Thêm/xóa class CSS
-   - textContent: Thay đổi text
-   - addEventListener(): Gắn sự kiện
-   
-5. LOCALSTORAGE:
-   - localStorage.getItem(key): Lấy dữ liệu
-   - localStorage.setItem(key, value): Lưu dữ liệu
-   - JSON.parse/stringify: Chuyển đổi Object ↔ String
-*/
